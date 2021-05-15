@@ -1,3 +1,4 @@
+import "./styles.css";
 import { Route, Switch } from "react-router-dom";
 import Table from "./components/Table";
 import FixturesPage from "./components/Fixtures";
@@ -59,10 +60,10 @@ import Layout from "./components/layouts/Layout";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Layout>
         <Switch>
-          <Route path="/tables">
+          <Route path="/" exact>
             <Table />
           </Route>
           <Route path="/fixtures/:teamuc" children={<FixturesPage />} />

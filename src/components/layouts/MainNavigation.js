@@ -8,7 +8,7 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to="/tables">Tables</Link>
+            <Link to="/">Tables</Link>
           </li>
         </ul>
       </nav>

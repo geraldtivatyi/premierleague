@@ -57,3 +57,19 @@ table th {
   background-color: #550162;
   color: white;
 }
+
+table td a {
+  color: #000000;
+}
+
+table td a:link {
+  text-decoration: none;
+}
+
+table td a:visited {
+  text-decoration: none;
+}
+
+table td a:hover {
+  color: #550162;
+}

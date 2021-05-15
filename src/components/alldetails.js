@@ -4,45 +4,13 @@ import { arr } from "./teamposition";
 import { gamesplayed } from "./gamesplayed";
 import { gameswon } from "./gameswon";
 import { gamesdrew } from "./gamesdrew";
+import { gameslost } from "./gameslost";
+import { gameGF } from "./goaldifference";
+import { gameGA } from "./goaldifference";
+import { gameGD } from "./goaldifference";
 
 let teamslength = teamslist.length;
 
-let gameslost = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
-let gameGF = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
-let gameGA = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
-let gameGD = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
 let tplist = [
   { "Manchester United": 1 },
   { "Manchester City": 2 },

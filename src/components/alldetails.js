@@ -8,18 +8,45 @@ import { gameslost } from "./gameslost";
 import { gameGF } from "./goaldifference";
 import { gameGA } from "./goaldifference";
 import { gameGD } from "./goaldifference";
+import { data } from "../data";
 
 let teamslength = teamslist.length;
+let dataLngth = data.length;
 
-let tplist = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
+// Create array to show each team's points
+let tplist = [];
+let teampointsarr = [];
+let pointsObj = {};
+for (let l = 0; l < teamslength; l++) {
+  let points = 0;
+  for (let m = 0; m < dataLngth; m++) {
+    if (data[m].score[arr[l]] != null || data[m].score[arr[l]] != undefined) {
+      let key1 = Object.keys(data[m].score)[0];
+      let key2 = Object.keys(data[m].score)[1];
+      let aliasString = "";
+      aliasString = arr[l];
+      if (aliasString === key1) {
+        if (data[m].score[arr[l]] > data[m].score[key2]) {
+          points = points + 3;
+        } else if (data[m].score[arr[l]] < data[m].score[key2]) {
+          points = points + 0;
+        } else if (data[m].score[arr[l]] === data[m].score[key2]) {
+          points = points + 1;
+        }
+      } else if (aliasString === key2) {
+        if (data[m].score[arr[l]] > data[m].score[key1]) {
+          points = points + 3;
+        } else if (data[m].score[arr[l]] < data[m].score[key1]) {
+          points = points + 0;
+        } else if (data[m].score[arr[l]] === data[m].score[key1]) {
+          points = points + 1;
+        }
+      }
+    }
+  }
+  pointsObj = { [arr[l]]: points };
+  tplist.push(pointsObj);
+}
 
 //Build this array to show the complete table
 let table = [];

@@ -2,18 +2,10 @@ import { teamslist } from "./teamslist";
 import { positions } from "./teamposition";
 import { arr } from "./teamposition";
 import { gamesplayed } from "./gamesplayed";
+import { gameswon } from "./gameswon";
 
 let teamslength = teamslist.length;
 
-let gameswon = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
 let gamesdrew = [
   { "Manchester United": 1 },
   { "Manchester City": 2 },

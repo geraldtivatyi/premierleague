@@ -67,7 +67,7 @@ export const data = [
     date: "2021-05-11T12:00:00"
   },
   {
-    score: { Arsenal: 0, Leicester: 0 },
+    score: { Arsenal: 0, "Leicester City": 0 },
     date: "2021-04-28T12:00:00"
   },
   {

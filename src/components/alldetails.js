@@ -1,35 +1,10 @@
 import { teamslist } from "./teamslist";
+import { positions } from "./teamposition";
+import { arr } from "./teamposition";
+import { gamesplayed } from "./gamesplayed";
 
 let teamslength = teamslist.length;
 
-// Create arrays of dummy data for restructuring data
-let positions = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
-let arr = [
-  "Manchester United",
-  "Manchester City",
-  "Leicester City",
-  "Arsenal",
-  "Chelsea",
-  "Liverpool",
-  "Tottenham Hotspur"
-];
-let gamesplayed = [
-  { "Manchester United": 1 },
-  { "Manchester City": 2 },
-  { "Leicester City": 3 },
-  { Arsenal: 4 },
-  { Chelsea: 5 },
-  { Liverpool: 6 },
-  { "Tottenham Hotspur": 7 }
-];
 let gameswon = [
   { "Manchester United": 1 },
   { "Manchester City": 2 },

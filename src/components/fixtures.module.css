@@ -1,6 +1,12 @@
-.fixturelist .fixture {
+.fixturelist {
   border-style: solid;
   border-width: thin 0px thin 0px;
+}
+
+.fixture {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .title {

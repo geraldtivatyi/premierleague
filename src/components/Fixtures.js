@@ -46,7 +46,26 @@ function FixturesPage() {
                 <h2>{newFormat}</h2>
                 <div className={classes.fixture}>
                   <p>{Object.keys(d.score)[0]}</p>
-                  <p>{time}</p>
+                  <p>
+                    <b>{time}</b>
+                  </p>
+                  <p>{Object.keys(d.score)[1]}</p>
+                </div>
+              </div>
+            );
+        } else {
+          if (
+            Object.keys(d.score)[0] === teamuc ||
+            Object.keys(d.score)[1] === teamuc
+          )
+            return (
+              <div className={classes.fixturelist}>
+                <h2>{newFormat}</h2>
+                <div className={classes.fixture}>
+                  <p>{Object.keys(d.score)[0]}</p>
+                  <p>
+                    <b>{time}</b>
+                  </p>
                   <p>{Object.keys(d.score)[1]}</p>
                 </div>
               </div>

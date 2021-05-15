@@ -1,6 +1,6 @@
 import classes from "./fixtures.module.css";
 import { Link } from "react-router-dom";
-import { data } from "../data";
+import { sorted } from "./sorteddata";
 import { useParams } from "react-router-dom";
 
 function FixturesPage() {
@@ -25,7 +25,7 @@ function FixturesPage() {
           </div>
         </Link>
       </div>
-      {data.map((d) => {
+      {sorted.map((d) => {
         var date = new Date(d.date),
           time = date.getHours() + ":" + date.getMinutes(),
           newFormat = date.getDate() + "/" + date.getMonth() + ", " + time;
@@ -63,9 +63,11 @@ function FixturesPage() {
                 <h2>{newFormat}</h2>
                 <div className={classes.fixture}>
                   <p>{Object.keys(d.score)[0]}</p>
+                  <p>{d.score[Object.keys(d.score)[0]]}</p>
                   <p>
                     <b>{time}</b>
                   </p>
+                  <p>{d.score[Object.keys(d.score)[1]]}</p>
                   <p>{Object.keys(d.score)[1]}</p>
                 </div>
               </div>

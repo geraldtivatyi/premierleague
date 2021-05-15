@@ -1,4 +1,7 @@
-import "./styles.css";
+import { Route, Switch } from "react-router-dom";
+import Table from "./components/Table";
+import FixturesPage from "./components/Fixtures";
+import Layout from "./components/layouts/Layout";
 
 // FlankSource JS code exam
 //
@@ -54,11 +57,19 @@ import "./styles.css";
 //
 // Please feel free to let us know if the test was overly difficult or easy or problematic in any way.
 
-export default function App() {
+function App() {
   return (
-    <div className="App">
-      <h1>Hello Codesandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div>
+      <Layout>
+        <Switch>
+          <Route path="/tables">
+            <Table />
+          </Route>
+          <Route path="/fixtures/:teamuc" children={<FixturesPage />} />
+        </Switch>
+      </Layout>
     </div>
   );
 }
+
+export default App;

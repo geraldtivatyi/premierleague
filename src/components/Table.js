@@ -1,5 +1,5 @@
 import classes from "./table.module.css";
-import { allteams } from "./alldetails";
+import { allteams } from "../restructured/alldetails";
 
 function Table() {
   return (

@@ -1,6 +1,6 @@
 import classes from "./fixtures.module.css";
 import { Link } from "react-router-dom";
-import { sorted } from "./sorteddata";
+import { sorted } from "../restructured/sorteddata";
 import { useParams } from "react-router-dom";
 
 function FixturesPage() {

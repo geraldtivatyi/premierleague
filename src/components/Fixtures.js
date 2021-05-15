@@ -2,6 +2,7 @@ import classes from "./fixtures.module.css";
 import { Link } from "react-router-dom";
 import { sorted } from "../restructured/sorteddata";
 import { useParams } from "react-router-dom";
+import { format } from "date-fns";
 
 function FixturesPage() {
   let { teamuc } = useParams();
@@ -28,7 +29,13 @@ function FixturesPage() {
       {sorted.map((d) => {
         var date = new Date(d.date),
           time = date.getHours() + ":" + date.getMinutes(),
-          newFormat = date.getDate() + "/" + date.getMonth() + ", " + time;
+          newFormat =
+            format(
+              new Date(date.getFullYear(), date.getMonth(), date.getDate()),
+              "dd/MM"
+            ) +
+            ", " +
+            time;
         if (date.getMinutes() === 0) {
           time = date.getHours() + ":00";
           newFormat = date.getDate() + "/" + date.getMonth() + ", " + time;

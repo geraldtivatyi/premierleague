@@ -45,11 +45,11 @@ function FixturesPage() {
               <div className={classes.fixturelist}>
                 <h2>{newFormat}</h2>
                 <div className={classes.fixture}>
-                  <p>{Object.keys(d.score)[0]}</p>
-                  <p>
+                  <p className={classes.team1}>{Object.keys(d.score)[0]}</p>
+                  <p className={classes.time}>
                     <b>{time}</b>
                   </p>
-                  <p>{Object.keys(d.score)[1]}</p>
+                  <p className={classes.team2}>{Object.keys(d.score)[1]}</p>
                 </div>
               </div>
             );

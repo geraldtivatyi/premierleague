@@ -1,10 +1,6 @@
 import { gamesdrew } from "./gamesdrew";
 import { allteams } from "./alldetails";
 
-test("number of games drawn", () => {
-  expect(gamesdrew.length).toBe(7);
-});
-
 test("number of games drawn by team at position i", () => {
   let i = 5; 
   let team = allteams[i-1].["Club"];

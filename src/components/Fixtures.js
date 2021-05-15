@@ -38,7 +38,13 @@ function FixturesPage() {
             time;
         if (date.getMinutes() === 0) {
           time = date.getHours() + ":00";
-          newFormat = date.getDate() + "/" + date.getMonth() + ", " + time;
+          newFormat =
+            format(
+              new Date(date.getFullYear(), date.getMonth(), date.getDate()),
+              "dd/MM"
+            ) +
+            ", " +
+            time;
         }
         if (
           d.score[Object.keys(d.score)[0]] === null ||
